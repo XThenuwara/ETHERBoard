@@ -3,7 +3,6 @@ import { ReactFlow, useNodesState, useEdgesState, Background, MiniMap, NodeToolb
 import "@xyflow/react/dist/style.css";
 import { useTheme } from "next-themes";
 import { Block, BlockExtended } from "@/lib/types/block.type";
-import { modelEthBlock } from "../lib/model/EthBlockModel";
 
 const NodeComponent = (data: { data: { label: string; value: string; block: BlockExtended } }) => {
   const block = data.data.block
@@ -28,8 +27,8 @@ const NodeComponent = (data: { data: { label: string; value: string; block: Bloc
               <p className="w-64 text-ellipsis overflow-hidden">{block?.withdrawals?.length}</p>
             </div>
             <div className="p-2">
-              <h2 className="text-lg font-semibold dark:text-white">Withdrawals</h2>
-              <p className="w-64 text-ellipsis overflow-hidden">{block?.withdrawals?.length}</p>
+              <h2 className="text-lg font-semibold dark:text-white">Miner</h2>
+              <p className="w-64 text-ellipsis overflow-hidden">{block?.miner}</p>
             </div>
           </div>
         </div>
@@ -109,12 +108,13 @@ const BlockChainVisualizer = (props: IBlockChainVisualizerProps) => {
     if (reset) {
       setNodes([]);
       setEdges([]);
+      setLastPosition({ x: 0, y: 0 });
     }
   }, [reset]);
 
   return (
     <div className="react-flow h-full w-full">
-      <ReactFlow nodes={nodes} nodeTypes={nodeTypes} edges={edges} onNodesChange={onNodesChange} onEdgesChange={onEdgesChange} minZoom={0.8} maxZoom={4} attributionPosition="bottom-left" fitViewOptions={defaultViewport}>
+      <ReactFlow nodes={nodes} nodeTypes={nodeTypes} edges={edges} onNodesChange={onNodesChange} onEdgesChange={onEdgesChange} minZoom={0.2} maxZoom={4} attributionPosition="bottom-left" fitViewOptions={defaultViewport}>
         <Background />
         <NodeToolbar />
       </ReactFlow>

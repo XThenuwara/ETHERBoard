@@ -64,7 +64,7 @@ const Logo: React.FC<Props> = ({ variant = "row", withText = true, withLogo = tr
   return (
     <div className={`flex gap-2 ${classes} ${variant === "row" ? "items-center" : "flex-col"}`}>
       {withLogo && <LogoImage alt="Logo" className={getImageSizeClass()} />}
-      {withText && <h1 className={`font-semibold dark:text-white`} style={{fontSize: getFontSizeClass()}}>FrostBite</h1>}
+      {withText && <h1 className={`font-semibold dark:text-white`} style={{fontSize: getFontSizeClass()}}>EtherBoard</h1>}
     </div>
   );
 };
