@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./custom.css"
 import { ThemeProvider } from "@/lib/provider/ThemeProvider";
 import Navbar from "../components/Navbar";
 

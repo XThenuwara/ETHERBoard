@@ -1,0 +1,69 @@
+/* react flow  */
+
+.react-flow__node {
+  padding: 0rem;
+  border-radius: 6px;
+}
+
+.dark .react-flow {
+  .react-flow {
+  }
+
+  .react-flow__edge {
+    background-color: #111;
+  }
+
+  .react-flow__node {
+    background-color: rgba(232, 209, 255, 0.1);
+    border: 2px solid rgba(232, 209, 255, 0.8);
+    color: #fff;
+  }
+
+  .react-flow__minimap {
+    background-color: rgba(232, 209, 255, 0.1);
+    border: 2px solid rgba(232, 209, 255, 0.8);
+
+    .react-flow__minimap-viewport {
+      background-color: rgba(232, 209, 255, 0.8);
+    }
+  }
+
+  .react-flow__controls button {
+    background-color: rgba(232, 209, 255, 0.1) !important;
+    color: #fff;
+  }
+}
+
+.react-flow {
+  .react-flow {
+  }
+
+  .react-flow__edge {
+    background-color: #fff;
+  }
+
+  .react-flow__node {
+    background-color: rgba(232, 209, 255, 0.1);
+    border: 2px solid #c1aed5;
+    color: #111;
+  }
+}
+
+/* Glass  */
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);
+  }
+  
+.dark .glass {
+    background: rgba(25, 25, 84, 0.24);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);
+  }
